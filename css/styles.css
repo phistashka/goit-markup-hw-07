@@ -20,7 +20,7 @@ body {
 }
 
 img {
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -195,6 +195,17 @@ img {
 @media (min-width: 1200px) {
   .section-one {
     max-width: 1440px;
+  }
+}
+@media (min-device-pixel-ratio :2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx){
+  .section-one{
+    background-image:linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ), url('../images/peopleoffice1@2x.jpg');
   }
 }
 .main-title {
@@ -532,7 +543,7 @@ img {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+   
   }
 }
 
@@ -591,19 +602,17 @@ img {
   font-weight: 500;
   color: var(--background-buttontext-hover);
   text-align: center;
-  margin-bottom: 16px;
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
   .footer-title {
     text-align: left;
-    margin-top: 0;
+    /* margin-top: 0; */
   }
 }
-.footer-forms {
-  align-items: center;
-}
+
+
 .footer-form-button {
   background-color: var(--primary-brand);
   color: var(--background-buttontext-hover);
@@ -1042,16 +1051,15 @@ img {
   }
 }
 
-.burger-button {
+.burger-button{
   background-color: transparent;
   border: none;
   padding: 0;
   height: 22px;
   width: 32px;
 }
-.close-mobile-menu {
-  display: none;
-}
+
+
 
 /* Mobile menu styles */
 .list-links-mobile-menu{
@@ -1072,18 +1080,45 @@ img {
   text-decoration: none;
   color: var(--pressed-state);
 }
-.mobile-menu {
+
+
+@media (max-width: 767px){
+.mobile-menu{
+  position: fixed;
   width: 100%;
-  padding-left: 40px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 0;
+  top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 250ms ease-in-out;
+    padding: 80px 5px 40px 40px;
+    display: flex;
+    flex-direction: column;
   background-color: var(--background-buttontext-hover);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}}
+.mobile-menu.is-open{
+  transform: translateX(100%);
 }
-@media(min-width:768px){
-  .mobile-menu {
-    display: none;}
+.close-mobile-menu
+{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--accent);
+  fill: currentColor;
+  padding: 0;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 .contacts-mobile-menu{
 padding-top: 284px;
 padding-bottom: 48px;
@@ -1100,4 +1135,8 @@ padding: 0;
   font-size: 36px;
   line-height: 1.1;
   color: var(--primary-brand);
+}
+.icon-social-mobile {
+  display: flex;
+  gap: 56px;
 }
