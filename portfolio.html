@@ -20,22 +20,22 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-div">
+      <div class="container header-div-desktop">
         <!--Navigation-->
         <nav class="navigation">
           <a href="./index.html" class="logo">
             Web<span class="logo-header">Studio</span></a
           >
-          <ul class="list links-header">
+          <ul class="list links-header-desktop">
             <li class="links">
-              <a class="list-links" href="index.html">Studio</a>
+              <a class="list-links active-link" href="">Studio</a>
             </li>
             <li class="links">
-              <a class="list-links active-link" href="portfolio.html"
-                >Portfolio</a
-              >
+              <a class="list-links" href="portfolio.html">Portfolio</a>
             </li>
-            <li class="links"><a class="list-links" href="">Contacts</a></li>
+            <li class="links">
+              <a class="list-links" href="">Contacts</a>
+            </li>
           </ul>
         </nav>
         <address class="contacts">
@@ -52,6 +52,19 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="container header-div-mobile">
+        <nav class="navigation-mobile">
+          <a href="./index.html" class="logo">
+            Web<span class="logo-header">Studio</span></a
+          >
+          <button class="burger-button" type="button">
+            <svg class="burger-menu" width="32" height="22">
+              <use href="./images/forms-icons.svg#icon-charm_menu-hamburger-2"></use>
+            </svg>
+           </button>
+        </nav>
+       
       </div>
     </header>
     <main>
@@ -97,10 +110,10 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">
+                  <h2 class="list-img-title-portfolio">
                     Banking App Interface Concept
                   </h2>
-                  <p class="list-img-title-features-text">App</p>
+                  <p class="list-img-title-portfolio-text">App</p>
                 </div>
               </a>
             </li>
@@ -122,8 +135,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Cashless Payment</h2>
-                  <p class="list-img-title-features-text">Marketing</p>
+                  <h2 class="list-img-title-portfolio">Cashless Payment</h2>
+                  <p class="list-img-title-portfolio-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -145,8 +158,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Meditaion App</h2>
-                  <p class="list-img-title-features-text">App</p>
+                  <h2 class="list-img-title-portfolio">Meditaion App</h2>
+                  <p class="list-img-title-portfolio-text">App</p>
                 </div>
               </a>
             </li>
@@ -168,8 +181,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Taxi Service</h2>
-                  <p class="list-img-title-features-text">Marketing</p>
+                  <h2 class="list-img-title-portfolio">Taxi Service</h2>
+                  <p class="list-img-title-portfolio-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -191,8 +204,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Screen Illustrations</h2>
-                  <p class="list-img-title-features-text">Design</p>
+                  <h2 class="list-img-title-portfolio">Screen Illustrations</h2>
+                  <p class="list-img-title-portfolio-text">Design</p>
                 </div>
               </a>
             </li>
@@ -214,8 +227,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Online Courses</h2>
-                  <p class="list-img-title-features-text">Marketing</p>
+                  <h2 class="list-img-title-portfolio">Online Courses</h2>
+                  <p class="list-img-title-portfolio-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -237,10 +250,10 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">
+                  <h2 class="list-img-title-portfolio">
                     Instagram Stories Concept
                   </h2>
-                  <p class="list-img-title-features-text">Design</p>
+                  <p class="list-img-title-portfolio-text">Design</p>
                 </div>
               </a>
             </li>
@@ -262,8 +275,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Organic Food</h2>
-                  <p class="list-img-title-features-text">Web Site</p>
+                  <h2 class="list-img-title-portfolio">Organic Food</h2>
+                  <p class="list-img-title-portfolio-text">Web Site</p>
                 </div>
               </a>
             </li>
@@ -285,8 +298,8 @@
                   </div>
                 </div>
                 <div class="list-menu-img-text">
-                  <h2 class="list-img-title-features">Fresh Coffee</h2>
-                  <p class="list-img-title-features-text">Web Site</p>
+                  <h2 class="list-img-title-portfolio">Fresh Coffee</h2>
+                  <p class="list-img-title-portfolio-text">Web Site</p>
                 </div>
               </a>
             </li>
@@ -294,21 +307,22 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer"> 
       <div class="container">
         <!--Quotation to the action-->
-        <div class="footer-div">
-          <a href="./index.html" class="logo-footer">
+       <div class="footer-container">
+         <div class="footer-div">
+           <a href="./index.html" class="logo-footer">
             Web<span class="logo-footer-text">Studio</span></a
-          >
-          <p class="quotation">
+           >
+           <p class="quotation">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="social-footer">
-          <h3 class="footer-title">Social media</h3>
-          <ul class="list list-social-footer">
+           </p>
+          </div>
+         <div class="social-footer">
+           <h3 class="footer-title">Social media</h3>
+           <ul class="list list-social-footer">
             <li class="inst-footer">
               <a href="#" class="icons-footer">
                 <svg class="icon-footer" height="24" width="24">
@@ -337,12 +351,12 @@
                 </svg>
               </a>
             </li>
-          </ul>
-        </div>
-        <div class="footer-forms">
-          <p class="footer-title">Subscribe</p>
-          <form class="footer-form">
-            <label for="footer-input">
+           </ul>
+          </div>
+          <div class="footer-forms">
+           <p class="footer-title">Subscribe</p>
+           <form class="footer-form">
+             <label for="footer-input">
               <input
                 class="footer-input"
                 id="footer-input"
@@ -350,14 +364,15 @@
                 name="email"
                 placeholder="E-mail"
               />
-            </label>
-            <button class="footer-form-button" type="submit">
+             </label>
+             <button class="footer-form-button" type="submit">
               Subscribe
               <svg class="footer-form-icons" height="24" width="24">
                 <use href="./images/forms-icons.svg#icon-Frame3"></use>
               </svg>
-            </button>
-          </form>
+             </button>
+           </form>
+          </div>
         </div>
       </div>
     </footer>
